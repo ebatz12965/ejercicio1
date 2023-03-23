@@ -21,6 +21,7 @@ return new class extends Migration
             $table->date('modelo');
             $table->integer('capacidad_toneladas');
             $table->string('transporte_codigo',45);
+            $table->timestamps();
             //$table->string('transporte_codigo',45);
             //$table->foreignId('transporte_codigo')->references('codigo')->on('transporte');
             /*$table->foreignId('codigo_transporte')
@@ -28,7 +29,7 @@ return new class extends Migration
                 ->constrained('transporte')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();*/
-            $table->timestamps();
+
         });
     }
 
