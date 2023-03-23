@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('transporte', function (Blueprint $table) {
             //$table->id();
-            $table->string('codigo')->unique();
+            //$table->string('codigo')->unique();
+            $table->String('codigo',45)->primary()->unique();
             $table->string('nombre', 105);
             $table->string('razon_social',175);
             $table->timestamps();

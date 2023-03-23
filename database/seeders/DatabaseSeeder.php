@@ -27,13 +27,13 @@ class DatabaseSeeder extends Seeder
         $transporte->save();
 
         $camion = new camionModel();
+        $camion->id_placa='1';
         $camion->placa_camion='abc123';
         $camion->marca='Foton';
         $camion->color='azul';
         $camion->modelo='2023-03-03';
         $camion->capacidad_toneladas='2';
         $camion->transporte_codigo='abc12345';
-        $camion->id_placa='1';
         $camion->save();
     }
 }

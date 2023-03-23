@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('transporte', function (Blueprint $table) {
-                $table->primary('codigo');
+             //   $table->primary('codigo');
         });
     }
 

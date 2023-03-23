@@ -14,12 +14,14 @@ return new class extends Migration
         Schema::create('camion', function (Blueprint $table) {
             //$table->id();
             //$table->integer('id_placa',)->unique();
+            $table->integer('id_placa')->primary();
             $table->string('placa_camion', 6);
             $table->string('marca', 45);
             $table->string('color',25);
             $table->date('modelo');
             $table->integer('capacidad_toneladas');
-            $table->string('transporte_codigo',45);
+            $table->string('transporte_codigo',45)->foreign()->references('codigo')->on('transporte');
+            //$table->string('transporte_codigo',45);
             //$table->foreignId('transporte_codigo')->references('codigo')->on('transporte');
             /*$table->foreignId('codigo_transporte')
                 ->nullable()
