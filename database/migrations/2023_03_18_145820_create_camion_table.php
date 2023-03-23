@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('color',25);
             $table->date('modelo');
             $table->integer('capacidad_toneladas');
-            $table->string('transporte_codigo',45)->foreign()->references('codigo')->on('transporte');
+            $table->string('transporte_codigo',45);
             //$table->string('transporte_codigo',45);
             //$table->foreignId('transporte_codigo')->references('codigo')->on('transporte');
             /*$table->foreignId('codigo_transporte')
